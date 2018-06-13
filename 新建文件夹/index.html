@@ -1,22 +1,92 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>字体设计准则</title>
-	<link rel="stylesheet" href="css/css1.css" type="text/css" />
-</head>
-<body>
-	<h2>把握<span>移动端字体设计</span>的七大准则</h2>
-		<p class="a">更新时间:<span>2012年06月06日17时26分</span>&nbsp;&nbsp;来源:<span>传智播客</span></p>
-		<img src="img/a.jpg" hspace="30" align="left"/>
-		<p>◇&nbsp;<span>留足空间</span>，与普遍观点恰好相反，<span>字体并非弯弯曲曲的线条排列</span>，它主要在于周围和相互间的空间。</p>
-		<p>◇&nbsp;行宽是一行文字的长度。或者确切的说，<span>是一行文字的理想长度</span>，因为很难让每一行都精确吻合。</p>
-		<p>◇&nbsp;行距是行之间的空间，行距太紧凑，<span>会让视线难以从行尾扫视到下一行首。</span></p>
-		<p>◇&nbsp;所有字体至少都有一种最佳状态，<span>使字体在浏览器中最能保持字形的抗锯齿选项。</span></p>
-		<p>◇&nbsp;你读的多数内容是<span>居左对齐，右边沿参差不齐的</span>，这样看起来更<span>有节奏。</span></p>
-		<p>◇&nbsp;增强文字与背景对比的同时，我们也要<span>减少不同层次文字间的反差</span>。</p>
-		<p>◇&nbsp;<span>按比例调整字间距</span>，为移动端调整字号时，我们要意识到字间距发生了必要的变化。</p><hr/>
-		<p class="b">原文链接：<span>http://www.woshipm.com/pd/136680.html</span>文章分类：<span>艺术设计</span></p>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+				<style type="text/css">
+			input{
+				display: none;
+			}
+			label{
+				display: inline-block;
+				width: 60px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+			}
+			#cons{
+				box-sizing: border-box;
+				width: 600px;
+				height: 480px;
+				border: 1px solid black;
+				position: relative;
+				overflow: hidden;
+			}
+			#cons *{
+				width: 600px;
+				height: 480px;
+			}
+			#con1{
+				background: greenyellow;
+			}
+			#con2{
+				background: bisque;
+			}
+			#con3{
+				background: yellow;
+			}
+			#lou1:checked~#label1{
+				background: black;
+				color: white;
+			}
+			#lou2:checked~#label2{
+				background: black;
+				color: white;
+			}
+			#lou3:checked~#label3{
+				background: black;
+				color: white;
+			}
+			#lou1:checked~#cons #con1
+			{
+				position: relative;
+			    top: 0px;
+			}
+			#lou2:checked~#cons #con2
+			{
+				position: relative;
+			    top: -480px;
+			}
+			#lou3:checked~#cons #con3
+			{
+				position: relative;
+			    top: -960px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="lous">
+			<input type="radio" name="lou" checked="checked" id="lou1" />
+			<input type="radio" name="lou" id="lou2" />
+			<input type="radio" name="lou" id="lou3" />
+			<label for="lou1" id="label1">新闻</label>
+			<label for="lou2" id="label2">通知</label>
+		    <label for="lou3" id="label3">公告</label>
+		    <div id="cons">
+		    	<div id="con1">
+		    		新闻内容
+		    	</div>
+		    	<div id="con2">
+		    		通知内容
+		    	</div>
+		    	<div id="con3">
+		    		公告内容
+		    	</div>
+		    </div>
+		</div>
+
+	</head>
+	<body>
+		
+	</body>
 </html>
